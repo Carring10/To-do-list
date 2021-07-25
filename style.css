@@ -5,10 +5,11 @@
 }
 
 body {
-    background-image: linear-gradient(120deg, #f6d365, #fda085);
+    background-image: linear-gradient(120deg, #4447f5, #7697f3);
     color: white;
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
+    font-weight: 700;
 }
 
 header {
@@ -29,17 +30,23 @@ form button {
     font-size: 2rem;
     border: none;
     background: white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 form button {
-    color: #d88771;
+    color: #af71d8;
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 form button:hover{
-    background: #d88771;
+    background: #af71d8;
     color: white;
 }
 
@@ -64,6 +71,7 @@ form button:hover{
     justify-content: space-between;
     align-items: center;
     transition: all 0.5s ease;
+    border-radius: 5px;
 }
 
 .todo li {
@@ -72,7 +80,7 @@ form button:hover{
 
 .trash-btn,
 .complete-btn {
-    background: #ff6f47;
+    background: #af71d8;
     color: white;
     border: none;
     padding: 1rem;
@@ -80,8 +88,13 @@ form button:hover{
     font-size: 1rem;
 }
 
+.trash-btn {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
 .complete-btn {
-    background: rgb(77, 165, 77);
+    background: rgb(116, 201, 116);
 }
 
 .todo-item {
@@ -120,24 +133,39 @@ select {
 }
 
 select {
-    color: #ff6f47;
+    appearance: none;
+    color: #af71d8;
     width: 10rem;
     cursor: pointer;
     padding: 1rem;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
 }
 
 .select::after {
     content: "\25BC";
     position: absolute;
-    background: #ff6f47;
+    background: #af71d8;
     top: 0;
     right: 0;
-    padding: 1rem;
+    /* padding: 1rem; */
     pointer-events: none;
     transition: all 0.3s ease;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 100%;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
 }
 
 .select:hover::after {
     background: white;
-    color: #ff6f47;
+    color: #af71d8;
 }
